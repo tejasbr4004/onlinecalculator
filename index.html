@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OnlineCalculator.com</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+   <div class="header">
+      <marquee behavior="alternate" direction="right">
+         <h1 class="title">Basic_Calculator</h1>
+      </marquee>
+      <!-- <h1 class="title">Basic_Calculator</h1> -->
+   </div>
+
+   <div class="container">
+      <section class="calcbody" data-aos="slide-up" data-aos-easing="ease-in-out">
+         <form>
+            <div class="history1"></div>
+            <input type="text" class="screen">
+           
+         </form>
+         <div class="rows">
+            <div class="row" style="margin-top: 10px;">
+               <button onclick="Allclear()" class="operation">AC</button>
+               <button onclick="backspace()" class="operation"><i class="bi bi-backspace-fill"></i></button>
+               <button value="%" onclick="pressed(value,value)" class="operation">mod</button>
+               <button value="/" style="font-size:x-large;" onclick="pressed(value,'&div;')"
+                  class="operation">&div;</button>
+            </div>
+
+            <div class="row">
+               <button class="button" value="7" onclick="pressed(value,value)">7</button>
+               <button class="button" value="8" onclick="pressed(value,value)">8</button>
+               <button class="button" value="9" onclick="pressed(value,value)">9</button>
+               <button value="*" style="font-size:21px;" onclick="pressed(value,'x')"
+                  class="operation">&times;</i></button>
+            </div>
+
+            <div class="row">
+               <button class="button" value="4" onclick="pressed(value,value)">4</button>
+               <button class="button" value="5" onclick="pressed(value,value)">5</button>
+               <button class="button" value="6" onclick="pressed(value,value)">6</button>
+               <button value="-" style="font-size: xx-large;font-weight: 500;" onclick="pressed(value,value)"
+                  class="operation">-</i></button>
+            </div>
+
+            <div class="row">
+               <button class="button" value="1" onclick="pressed(value,value)">1</button>
+               <button class="button" value="2" onclick="pressed(value,value)">2</button>
+               <button class="button" value="3" onclick="pressed(value,value)">3</button>
+               <button   value="+" style="font-size: x-large;" onclick="pressed(value,value)" class="operation">+</button>
+            </div>
+
+            <div class="row" style="margin-bottom: 7px;">
+               <button  class="operation" value="=" id="calciequ"
+                 
+                  onclick="calculate()">=</button>
+               <button class="button" value="0" onclick="pressed(value,value)">0</button>
+               <button class="button" value="." style="font-size: x-large;" onclick="pressed(value,value)">.</button>
+            </div>
+         </div>
+      </section>
+   </div>
+
+   <footer>
+      <div class="foot">
+         &copy;All Rights are Reserved
+      </div>
+   </footer>
+
+   <script src="app.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init({
+
+         offset: 400,
+         duration: 2000,
+
+      });
+   </script>
+</body>
+
+</html>

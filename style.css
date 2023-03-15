@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, black, rgb(31, 31, 31), rgb(28, 27, 27));
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  height: 10vh;
+  width: 100%;
+  /* border: 2px solid black; */
+  align-items: center;
+  display: flex;
+  background: linear-gradient(45deg, black, rgb(44, 43, 43), rgb(20, 20, 20));
+  color: white;
+  text-shadow: -6px 2px 5px grey;
+  box-shadow: 17px 4px 20px 2px rgb(6 6 6);
+}
+
+.container {
+  position: absolute;
+  top: 8vh;
+  bottom: 0;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calcbody {
+  height: 72vh;
+  width: 50vh;
+  border: 2px solid orangered;
+  background-color: black;
+  margin: 0.81px;
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: 0px 0px 20px 1px red;
+}
+
+.calcbody:hover {
+  box-shadow: 0px 0px 20px 1px black;
+  border: 3px solid rgb(194, 9, 9);
+}
+
+.history1 {
+  margin-top: 7px;
+  height: 5vh;
+  width: 97%;
+  text-align: right;
+  background-color: rgb(18, 18, 18);
+  color: rgb(134, 131, 131);
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 6px;
+  font-size: xx-large;
+  overflow: scroll;
+  /* box-shadow: inset -4px 4px 5px -4px grey; */
+}
+
+
+.history1::-webkit-scrollbar {
+  display: none;
+}
+
+.screen {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 10vh;
+  width: 97%;
+  text-align: right;
+  /* pointer-events: none; */
+  background-color: rgb(18, 18, 18);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 35px;
+  padding-right: 6px;
+  overflow: scroll;
+  /* box-shadow: inset -4px -6px 4px -4px grey; */
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
+}
+
+.rows {
+  height: 55vh;
+  /* border: 1px solid green; */
+  display: grid;
+  justify-content: center;
+  margin: 10px;
+}
+
+.button {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(109, 2, 2);
+
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.button:hover {
+  /* background-color:rgb(143, 4, 4);
+   
+    border-color: red; */
+  /* background-color: white;
+    color: black;
+    border-color: rgb(137, 3, 3); */
+  box-shadow: 0px 0px 8px 3px red;
+  transition: all 0.5s ease-in-out;
+}
+
+.operation {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(109, 2, 2);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  background-color: red;
+
+}
+
+.operation:hover {
+  background-color: rgb(143, 4, 4);
+  border-color: red;
+  transition: all 0.5s ease-in-out;
+}
+
+#calciequ {
+  width: 110px;
+  border-radius: 10px;
+  height: 40px;
+  font-size: x-large;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  top: 100vh;
+  width: 100%;
+  height: 8vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  background: linear-gradient(45deg, black, rgb(20, 20, 20));
+  box-shadow: 0px -4px 20px 2px rgb(6 6 6);
+}
+
+@media (max-width:411px) {
+  .calcbody {
+    width: 43vh;
+  }
+}
+
+@media (max-width:285px) {
+  .calcbody {
+    width: 40vh;
+  }
+
+  .button {
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+  }
+
+  .operation {
+    height: 45px;
+    width: 45px;
+    font-size: smaller;
+    margin-right: 10px;
+  }
+  #calciequ{
+    width: 102px;border-radius: 10px;height: 40px;font-size: x-large;
+  }
+  #divide{
+    font-size: larger;
+  }
+}
